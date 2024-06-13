@@ -1,0 +1,281 @@
+:root {
+  --Dark-Blue: hsl(233, 26%, 24%);
+  --Lime-Green: hsl(136, 65%, 51%);
+  --Bright-Cyan: hsl(192, 70%, 51%);
+
+  --Grayish-Blue: hsl(233, 8%, 62%);
+  --Light-Grayish-Blue: hsl(220, 16%, 96%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  background-color: var(--Very-Light-Gray);
+  max-width: 100;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--White);
+  padding: 2.4rem 6rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+li a:hover {
+  border-bottom: 2px solid var(--Lime-Green);
+  color: var(--Dark-Blue);
+}
+
+li a {
+  text-decoration: none;
+  color: var(--Grayish-Blue);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.hamburger {
+  display: none;
+}
+
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 2.3rem;
+  padding: 1rem 3rem;
+  color: var(--White);
+  background: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to right,
+    hsla(136, 65%, 51%, 0.7),
+    hsla(192, 70%, 51%, 0.7)
+  );
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+}
+
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 13rem;
+}
+
+h1 {
+  font-size: 4.7rem;
+  font-weight: 400;
+  color: var(--Dark-Blue);
+}
+.hero-text-box p {
+  color: var(--Grayish-Blue);
+  line-height: 2.5rem;
+}
+
+.hero-img-box {
+  position: relative;
+  z-index: -4;
+  /* overflow: hidden; */
+}
+
+.hero-svg {
+  position: absolute;
+  z-index: -2;
+  top: -32%;
+  right: -45%;
+  width: 150%;
+  height: 140%;
+  object-fit: cover;
+  /* overflow-x: auto; */
+}
+
+.hero-img {
+  z-index: -1;
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  object-fit: cover;
+  width: 100%;
+  /* overflow-x: auto; */
+  /* overflow-y: auto; */
+}
+
+.features-section {
+  position: relative;
+  z-index: -40;
+  background-color: var(--Light-Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 14rem;
+  gap: 7rem;
+}
+.heading-box {
+  margin-top: 3rem;
+}
+.heading-box h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
+}
+.heading-box p {
+  color: var(--Grayish-Blue);
+  max-width: 55%;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.cards p {
+  color: var(--Grayish-Blue);
+  line-height: 2.5rem;
+}
+
+.articles-section {
+  padding: 5rem 14rem;
+}
+
+.articles-section h4 {
+  font-size: 4rem;
+  margin-bottom: 8rem;
+  color: var(--Dark-Blue);
+  font-weight: 400;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.articles-grid img {
+  width: 110%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 2rem 1.5rem;
+}
+
+.article-content p {
+  color: var(--Grayish-Blue);
+  line-height: 2.2rem;
+  font-weight: 250;
+  font-size: 1.4rem;
+}
+
+.author {
+  color: var(--Grayish-Blue);
+  font-size: 1.2rem;
+}
+
+.article-content h5 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  background-color: var(--Dark-Blue);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 6rem 14rem;
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+.footer-logo {
+  width: 35%;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.social-links a img {
+  width: 90%;
+  cursor: pointer;
+}
+
+.social-links a img:hover {
+  scale: 1.2;
+}
+
+.footer-links-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1.4rem;
+}
+
+.footer-links-box a {
+  color: var(--White);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.copy-right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1.5rem;
+}
+.footer-btn {
+  font-size: 13px;
+  padding: 0.8rem 2.4rem;
+  margin-bottom: 1rem;
+}
+.copy-right-box p {
+  color: var(--Grayish-Blue);
+  font-size: 12px;
+}
+
+/*  MEDIA QUIERIES */
